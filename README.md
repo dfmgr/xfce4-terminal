@@ -5,7 +5,7 @@ Terminal Emulator
 Automatic install/update:
 
 ```shell
-bash -c "$(curl -LSs https://github.com/dfmgr/xfce4-terminal/raw/master/install.sh)"
+bash -c "$(curl -LSs https://github.com/dfmgr/xfce4-terminal/raw/main/install.sh)"
 ```
 
 Manual install:
