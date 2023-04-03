@@ -146,6 +146,9 @@ fi
 # run post install scripts
 run_postinst() {
   dfmgr_run_post
+  [ -d "$HOME/.config/xfce4/terminal" ] || mkdir -p "$HOME/.config/xfce4/terminal"
+  [ -d "$HOME/.local/share/xfce4/terminal/colorschemes" ] || mkdir -p "$HOME/.local/share/xfce4/terminal/colorschemes"
+  cp -Rf "$APPDIR/etc/." "$HOME/.config/xfce4/terminal/"
 }
 #
 execute "run_postinst" "Running post install scripts"
