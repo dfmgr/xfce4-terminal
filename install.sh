@@ -38,7 +38,7 @@ REPO="https://github.com/$SCRIPTS_PREFIX/$APPNAME"
 INSTDIR="$HOME/.local/share/CasjaysDev/$SCRIPTS_PREFIX/$APPNAME"
 REPORAW="https://github.com/$SCRIPTS_PREFIX/$APPNAME/raw/$REPO_BRANCH"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-APPDIR="$HOME/.config/$APPNAME"
+APPDIR="$INSTDIR"
 PLUGIN_DIR="$HOME/.local/share/$APPNAME/plugins"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 BUILD_NAME="$APPNAME"
@@ -205,8 +205,8 @@ __run_post_install() {
   local getRunStatus=0
   [ -d "$HOME/.config/xfce4/terminal" ] || __mkdir "$HOME/.config/xfce4/terminal"
   [ -d "$HOME/.local/share/xfce4/terminal/colorschemes" ] || __mkdir "$HOME/.local/share/xfce4/terminal/colorschemes"
-  __cp_rf "$APPDIR/." "$HOME/.config/xfce4/terminal/"
-  __cp_rf "$APPDIR/colorschemes/." "$HOME/.local/share/xfce4/terminal/colorschemes/"
+  __cp_rf "$APPDIR/etc/." "$HOME/.config/xfce4/terminal/"
+  __cp_rf "$APPDIR/etc/colorschemes/." "$HOME/.local/share/xfce4/terminal/colorschemes/"
   return $getRunStatus
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
